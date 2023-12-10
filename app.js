@@ -18,6 +18,10 @@ app.use('/api', apiKey);
 app.use('/api/users', userRoutes);
 app.use(errorHandler);
 
+app.get('/',(req,res)=>{
+    res.status(200).json({'sucsess':"working"})
+})
+
 
 
 const port = process.env.PORT || '8080'
